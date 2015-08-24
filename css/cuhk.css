@@ -1,0 +1,153 @@
+*{ 
+	padding: 0;
+	margin: 0;
+}
+
+html, body{  height:100%;  }
+
+body{ background-color: #6D1B6D;}
+
+ul, li{
+	list-style-type:none;
+}
+
+a{
+	text-decoration: none;
+	color:black;
+	display: block;
+	font-size: 17px;   /*字体*/
+	font-weight: 550;
+}
+
+/*-----menuicon-------*/
+.menuicon{
+	background-color: pink;
+	opacity:0.5;
+	width:50px;
+	height:50px;
+	position:fixed;
+	top:0;
+	right:0;
+	z-index: 999;
+}
+
+/*-----menubar-----*/
+.menubar{
+	background-color: blue;
+	width:200px;
+	min-height:100%;
+	position:fixed;
+	top:0;
+	right:0;
+	float:none;
+	border:3px green solid;
+	display:none;
+	z-index: 1000;
+}
+
+.closeicon{
+	background-color: green;
+	width:50px;
+	height:50px;
+	position: absolute;
+	margin-right:150px;
+}
+
+/*---------first-calss menu---------*/
+.menubar ul{
+   width:100%;
+   height:100%;
+}
+
+.menubar ul li{
+	width:100%;
+	height:60px;
+	position:relative;
+}
+
+.menubar ul li:hover{
+	background-color: rgba(252,224,248,0.4);
+	border-bottom: 3px #503709 solid;
+	border-right: 3px #503709 solid;
+	border-bottom-right-radius:6px;
+	box-shadow: 6px 6px 20px #888888;
+}
+
+.menubar ul li a{
+	width:100%;
+	height:auto;
+	margin-top:20px;
+	text-align: center;
+}
+
+/*---------second-calss menu---------*/
+.menubar ul li ul{
+	position:absolute;
+	right:100px;
+	top:0;
+	display: none;
+}
+
+.menubar ul li:hover ul{
+	display: block;
+}
+
+.menubar ul li ul li{
+	float:none;
+	background-color: rgba(252,241,227,0.6);
+
+} 
+
+.clearfix:after{
+	content:".";
+	display:block;
+	visibility: hidden;
+	height:0;
+	clear:both;
+}
+
+/*---------pics---------*/
+#picwrap{
+	width:1000px;
+	height:auto;
+	margin: 20px 10% 0 25%;
+	float:left;
+	/*border: 3px solid yellow;*/
+} 
+
+#picwaterfall{
+   width:100%;
+   height:100%;
+   float: left;
+   position:relative;
+}
+
+.box{
+	margin:10px;
+	/*padding:15px 0 0 15px;*/
+	float:left;
+	/* border: 3px green solid;*/  
+}
+
+.pic{
+	background-color: #fff;
+	border:6px solid #fff;
+	border-radius: 5px;
+	box-shadow:0 0 20px #ccc;
+}
+
+.pic img{
+	width:200px;
+	height:auto;
+}
+
+#morepic{
+	 width:60px;
+	 height:60px;
+	 border:3px black solid;
+     cursor: pointer;
+     position:fixed;
+     right:20%;
+     top:50%;
+}
+

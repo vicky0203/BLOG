@@ -3,7 +3,6 @@
 
 html, body{
    height:100%;
-   /*cursor:pointer;*/
 }
 
 ul, li{
@@ -12,13 +11,17 @@ ul, li{
 
 a{
 	text-decoration: none;
+	color:black;
+	display: block;
+	font-size: 17px;   /*字体*/
+	font-weight: 550;
 }
 
 /*-------menu---------*/
 .menu{
-	background: rgba(255,238,221,0.7); 
+	background-color: rgba(252,241,227,0.6);
 	width:100%;
-	height:60px;
+	height:50px;
 	position:fixed;
 	top:0px;
 	float:left;
@@ -31,6 +34,8 @@ a{
 	height:100%;
 	float:left;
 }
+
+/*---------option---------*/
 .pagelink{
 	/*background: blue;*/
 	width:85%;
@@ -38,29 +43,55 @@ a{
 	float:left;
 }
 
+     /*---------first-calss menu---------*/
 .pagelink ul{
    width:100%;
    height:100%;
-   display: block;
 }
 
 .pagelink ul li{
-	display: inline-block;
-	width:20%;
+	width:130px;
 	height:100%;
 	float:left;
+	position: relative;
+}
+
+.pagelink ul li:hover{
+	background-color: rgba(252,224,248,0.4);
+	border-bottom: 3px #503709 solid;
+	border-right: 3px #503709 solid;
+	border-bottom-right-radius:6px;
+	box-shadow: 6px 6px 20px #888888;
 }
 
 .pagelink ul li a{
-	display:inline-block;
 	width:100%;
-	height:100%;
+	height:auto;
 	float:left;
-	margin:20px 0;
-	text-align: left;
-	font-size:20px;
+	margin-top:20px;
+	text-align: center;
+}
+
+     /*---------second-calss menu---------*/
+.pagelink ul li ul{
+	position:absolute;
+	left:0;
+	top:50px;
+	display: none;
+}
+
+.pagelink ul li:hover ul{
+	display: block;
+}
+
+.pagelink ul li ul li{
+	float:none;
+	/*background-color: rgba(255,238,221,0.5);*/
+	background-color: rgba(252,241,227,0.6);
 
 }
+
+
 
 /*-------background----------*/
 
