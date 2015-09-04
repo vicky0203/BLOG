@@ -6,7 +6,7 @@ html, body{
 }
 
 ul, li{
-	list-style-type:none;
+	list-style:none;
 }
 
 a{
@@ -20,6 +20,7 @@ a{
 /*-------menu---------*/
 .menu{
 	background-color: rgba(252,241,227,0.6);
+	box-shadow: 0 3px 20px rgb(252,241,227), 0 0 20px rgba(0,0,0,0.3) inset;
 	width:100%;
 	height:50px;
 	position:fixed;
@@ -115,10 +116,10 @@ a{
 	height:100%;
 }
 
-.picwrap #pic li img{
+.picwrap #pic li, .picwrap #pic li a, .picwrap #pic li img{
     display: block;
-	width:auto;
-	height:auto;
+	width:100%;
+	height:100%;
 }
 
 .picwrap #list{

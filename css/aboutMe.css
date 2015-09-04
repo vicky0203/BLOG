@@ -1,0 +1,101 @@
+*{padding:0; margin:0;}
+
+body{
+   background-color: #043E55;
+}
+
+#wrap{
+	width:1000px;
+	min-height: 900px;
+	height:auto;
+	margin:0 auto;
+	background-color: #fff;
+	box-shadow: 0 0 15px 5px #000, 0 0 40px rgba(0,0,0,0.5) inset;
+	-webkit-box-shadow:  0 0 15px 5px #000, 0 0 40px rgba(0,0,0,0.5) inset;
+	-ms-box-shadow:  0 0 15px 5px #000, 0 0 40px rgba(0,0,0,0.5) inset;
+	-o-box-shadow:  0 0 15px 5px #000, 0 0 40px rgba(0,0,0,0.5) inset;
+	-moz-box-shadow:  0 0 15px 5px #000, 0 0 40px rgba(0,0,0,0.5) inset;
+}
+
+/*-----head-----*/
+#header{
+	height:150px;
+	width:100%;
+	background-color: #ccc;
+}
+
+
+/*-----foot-----*/
+#footer{
+	height:100px;
+	width:100%;
+	background-color: #000;
+}
+
+
+/*-----content-----*/
+#content{
+	min-height: 800px;
+	height:auto;
+	width:100%;
+}
+
+.chapter{
+	width:100%;
+	height:auto;
+/*	background-color: green;*/
+}
+
+
+/*-----content title-----*/
+.title{
+	display: block;
+	width:100%;
+	height:40px;   /*height = line-height chuizhijuzhong*/
+	line-height: 40px;
+/*	background-color: pink;*/
+	overflow: hidden;
+	cursor: pointer;
+    font-size: 18px;
+}
+
+.title:hover{
+	background-color: #ccc;
+}
+
+.chapter .title i{
+	display: inline;
+	float: left;
+	width:20px;
+	height:100%;
+	margin:10px;
+	background-image: url("../images/learnicon.png");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+.chapter .title span{
+	display: inline-block;
+	width:40px;
+	height:100%;
+	float: right;
+	text-align: center;
+	font-weight: bold;
+}
+
+
+/*-----content ul info-----*/
+.info{
+    margin-left:25px; 
+}
+
+.info li{
+    list-style:square;
+    list-style-position: inside;
+
+    width:100%;
+    inline-height:20px;
+}
+
+

@@ -7,6 +7,22 @@ $(window).on("load",function(){
 							 {'src':'24.jpg'},{'src':'25.jpg'},{'src':'26.jpg'},
 							 {'src':'27.jpg'},{'src':'28.jpg'}] };	//json get from remote server
 
+/*      $.ajax({
+        url:"./js/cuhk.json",
+        type:"GET",
+        success:function(data,status){
+            $.each(data.imgsdata, function(index, item){
+            console.log(index + "aaaa" + item.src);
+          });
+        }
+      });*/
+    $.getJSON("./js/cuhk.json",function(data){
+          $.each(data.imgsdatatest, function(index, item){
+            console.log(index + "aaaa" + item.src);
+          });
+    });
+
+
     setWaterFall();	// initial page				 
 
     $("#morepic").click(function(){  //load more pictures icon control

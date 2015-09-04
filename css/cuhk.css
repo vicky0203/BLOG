@@ -3,9 +3,10 @@
 	margin: 0;
 }
 
-html, body{  height:100%;  }
-
-body{ background-color: #6D1B6D;}
+body{ 
+    background-color: #6D1B6D;
+    /*height:auto;*/
+}
 
 ul, li{
 	list-style-type:none;
@@ -16,7 +17,59 @@ a{
 	color:black;
 	display: block;
 	font-size: 17px;   /*字体*/
-	font-weight: 550;
+	font-weight: 600;
+}
+
+.clearfix:before, .clearfix:after{
+	content:"";
+	display:block;
+	visibility: hidden;
+	height:0;
+	clear:both;
+}
+
+/*---------pics---------*/
+#picwrap{
+	width:1000px;
+	height:auto;
+	margin:20px auto 0;
+	/*border: 3px solid yellow;*/
+} 
+
+#picwaterfall{
+   width:100%;
+   height:auto;
+   position:relative;
+}
+
+.box{
+	margin:10px;
+	/*padding:15px 0 0 15px;*/
+	 float:left; 
+	/* border: 3px green solid;*/  
+}
+
+.pic{
+	background-color: #fff;
+	border:6px solid #fff;
+	border-radius: 5px;
+	box-shadow:0 0 20px #ccc;
+}
+
+.pic img{
+	width:200px;
+	height:auto;
+}
+
+#morepic{
+	 width:60px;
+	 height:60px;
+	 border:3px black solid;
+     cursor: pointer;
+     position:fixed;
+     right:20%;
+     top:50%;
+     z-index: 900;
 }
 
 /*-----menuicon-------*/
@@ -97,57 +150,3 @@ a{
 	background-color: rgba(252,241,227,0.6);
 
 } 
-
-.clearfix:after{
-	content:".";
-	display:block;
-	visibility: hidden;
-	height:0;
-	clear:both;
-}
-
-/*---------pics---------*/
-#picwrap{
-	width:1000px;
-	height:auto;
-	margin: 20px 10% 0 25%;
-	float:left;
-	/*border: 3px solid yellow;*/
-} 
-
-#picwaterfall{
-   width:100%;
-   height:100%;
-   float: left;
-   position:relative;
-}
-
-.box{
-	margin:10px;
-	/*padding:15px 0 0 15px;*/
-	float:left;
-	/* border: 3px green solid;*/  
-}
-
-.pic{
-	background-color: #fff;
-	border:6px solid #fff;
-	border-radius: 5px;
-	box-shadow:0 0 20px #ccc;
-}
-
-.pic img{
-	width:200px;
-	height:auto;
-}
-
-#morepic{
-	 width:60px;
-	 height:60px;
-	 border:3px black solid;
-     cursor: pointer;
-     position:fixed;
-     right:20%;
-     top:50%;
-}
-
