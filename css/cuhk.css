@@ -28,6 +28,28 @@ a{
 	clear:both;
 }
 
+
+@font-face {
+	font-family:"imooc-icon";
+	src:url("../fonts/icomoon.eot") format("embedded-openype"), /*IE9兼容模式*/
+	    url("../fonts/icomoon.eot?#iefix") format("embedded-openype"),
+	    url("../fonts/icomoon.woff") format("woff"),
+		url("../fonts/icomoon.ttf") format("truetype"),
+		url("../fonts/icomoon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+.imooc-icon{
+	font-family: "imooc-icon";
+	font-style: normal;
+	font-weight: normal;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	cursor:pointer;
+}
+
 /*---------pics---------*/
 #picwrap{
 	width:1000px;
@@ -61,83 +83,110 @@ a{
 	height:auto;
 }
 
-#morepic{
+.morepics{
 	 width:60px;
 	 height:60px;
-	 border:3px black solid;
+	 background-color: #fff;
+	 box-shadow: 0 0 10px 3px #ccc;
+	 opacity: 0.8;
      cursor: pointer;
      position:fixed;
      right:20%;
      top:50%;
      z-index: 900;
+
+     font-family: "imooc-icon";
+     line-height: 60px;
+     text-align: center;
+     font-size: 40px;
+     color:#FF0092;
 }
 
-/*-----menuicon-------*/
-.menuicon{
-	background-color: pink;
-	opacity:0.5;
-	width:50px;
-	height:50px;
-	position:fixed;
-	top:0;
-	right:0;
-	z-index: 999;
-}
 
-/*-----menubar-----*/
-.menubar{
-	background-color: blue;
+/*--------menu----------*/
+.menu{
+	/*border:5px solid red;*/
 	width:200px;
-	min-height:100%;
+	height:auto;
 	position:fixed;
-	top:0;
-	right:0;
-	float:none;
-	border:3px green solid;
-	display:none;
+	top:30px;
+	right:40px;
 	z-index: 1000;
 }
 
+
+/*-----menuicon-------*/
+
+.menuicon{
+    display: block;
+    width: 50px;
+    height: 40px;
+    margin-left:150px;
+    /*background-color: yellow;*/
+    font-size: 40px;
+	color:#ccc;
+}
+
+
+/*-----menubar-----*/
+.menubar{
+	width:100%;
+	height:auto;
+	background-color: rgba(0,0,0,0.6);
+	border-radius: 10px;
+	box-shadow:0 0 10px 5px rgba(90,90,90,0.6);
+/* 0 0 20px 5px rgba(255,255,255,0.5) inset, */
+    position: relative;
+
+    display: none;
+}
+
+.menubar a{
+	text-decoration: none;
+	color:#fff;
+	display: block;
+	font-weight: 600;
+}
+
 .closeicon{
-	background-color: green;
-	width:50px;
-	height:50px;
+	display: block;
+	width:30px;
+	height:30px;
 	position: absolute;
-	margin-right:150px;
+	top:5px;
+	left:3px;
+	/*background-color: green;*/
+	color:#ccc;
+	font-size: 16px;
+	text-align: center;
 }
 
 /*---------first-calss menu---------*/
 .menubar ul{
    width:100%;
-   height:100%;
+   height:auto;
 }
 
 .menubar ul li{
 	width:100%;
-	height:60px;
-	position:relative;
+	height:auto;
+	min-height: 40px;
 }
 
 .menubar ul li:hover{
-	background-color: rgba(252,224,248,0.4);
-	border-bottom: 3px #503709 solid;
-	border-right: 3px #503709 solid;
-	border-bottom-right-radius:6px;
-	box-shadow: 6px 6px 20px #888888;
+	box-shadow: 0 0 20px rgba(255,255,255,0.6);
 }
 
 .menubar ul li a{
 	width:100%;
-	height:auto;
-	margin-top:20px;
+	height:40px;
 	text-align: center;
+	vertical-align:bottom;
+	font-size: 17px;   /*字体*/
 }
 
 /*---------second-calss menu---------*/
 .menubar ul li ul{
-	position:absolute;
-	right:100px;
-	top:0;
 	display: none;
 }
 
@@ -146,7 +195,5 @@ a{
 }
 
 .menubar ul li ul li{
-	float:none;
-	background-color: rgba(252,241,227,0.6);
-
+	background-color: rgba(120,120,120,0.4);
 } 

@@ -29,12 +29,51 @@ a{
 	z-index: 999;	
 }
 
+@font-face {
+	font-family: "imooc-icon";
+	src:url("../fonts/icomoon.eot") format("embedded-openype"),
+	    url("../fonts/icomoon.eot?#iefix") format("embedded-openype"),
+	    url("../fonts/icomoon.woff") format("woff"),
+	    url("../fonts/icomoon.ttf") format("truetype"),
+	    url("../fonts/icomoon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.imooc-icon{
+	font-family: "imooc-icon";
+	font-style: normal;
+	font-weight: normal;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+
 .logo{
-	/*background: red;*/
-	width:15%;
+	display: inline-block;
+	width:50px;
 	height:100%;
 	float:left;
+	margin: 0 100px;
+	/*background: red;*/
+	border-radius: 10px;
+	font-size: 40px;
+	color:#FF00A6;
+	text-align: center;
+
+	-webkit-animation: logoswing 2s infinite ease-in-out;
+	-ms-animation: logoswing 2s infinite ease-in-out;
+	-moz-animation: logoswing 2s infinite ease-in-out;
+	-o-animation: logoswing 2s infinite ease-in-out;
+	animation: logoswing 2s infinite ease-in-out;
+
 }
+
+@-webkit-keyframes logoswing{
+	0%, 100%{-webkit-transform: rotate(0);}
+	30% {-webkit-transform:rotate(-30deg);}
+    60% {-webkit-transform:rotate(30deg);}
+}
+
 
 /*---------option---------*/
 .pagelink{

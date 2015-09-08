@@ -1,5 +1,14 @@
 $( window ).on( "load", function(){
 	 
+    //menu
+    $(".menuicon").mouseover(function(){
+         // $(".menubar").fadeIn(1000);
+          $(".menubar").animate({"height":'toggle'},"1");
+     });
+     $(".closeicon").click(function(){
+         $(".menubar").animate({"height":'toggle'},"1");
+     });
+
     // var leftboxs = $(".left .box");
     // var rightboxs = $(".right .box");
     // var timer1 = setInterval(function(){

@@ -25,7 +25,7 @@ $(window).on("load",function(){
 
     setWaterFall();	// initial page				 
 
-    $("#morepic").click(function(){  //load more pictures icon control
+    $(".morepics").click(function(){  //load more pictures icon control
     	 $.each(imgsdata.data,function(index,value){
         console.log(index);
           var newBox = $('<div>').addClass('box').appendTo( $('#picwaterfall') );
@@ -38,11 +38,12 @@ $(window).on("load",function(){
 
 function menu(){
     $(".menuicon").mouseover(function(){
-        $(".menubar").fadeIn(1000);
-    });
-    $(".closeicon").click(function(){
-        $(".menubar").hide();
-    })
+         // $(".menubar").fadeIn(1000);
+          $(".menubar").animate({"height":'toggle'},"1");
+     });
+     $(".closeicon").click(function(){
+         $(".menubar").animate({"height":'toggle'},"1");
+     });
 }
 
 function setWaterFall(){
