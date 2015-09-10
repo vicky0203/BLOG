@@ -13,13 +13,11 @@ a{
 	text-decoration: none;
 	color:black;
 	display: block;
-	font-size: 17px;   /*字体*/
-	font-weight: 550;
 }
 
 /*-------menu---------*/
 .menu{
-	background-color: rgba(252,241,227,0.6);
+	background-color: rgba(252,241,227,0.8);
 	box-shadow: 0 3px 20px rgb(252,241,227), 0 0 20px rgba(0,0,0,0.3) inset;
 	width:100%;
 	height:50px;
@@ -81,6 +79,9 @@ a{
 	width:85%;
 	height:100%;
 	float:left;
+
+    font-family: "Arial", "sans-serif";
+	font-size: 18px;
 }
 
      /*---------first-calss menu---------*/

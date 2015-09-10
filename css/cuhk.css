@@ -50,17 +50,34 @@ a{
 	cursor:pointer;
 }
 
+/*---------left---------*/
+.left{
+	width: 300px;
+	height: 100%;
+    background-color: #F0E3B2;
+    box-shadow: 0 0 10px 3px #000;
+	position: fixed;
+	left:0;
+	right:0;
+
+	font-family: "Dancing Script", cursive;
+	font-size: 25px;
+}
+
+
 /*---------pics---------*/
 #picwrap{
 	width:1000px;
 	height:auto;
-	margin:20px auto 0;
+	position: absolute;
+	left:350px;
 	/*border: 3px solid yellow;*/
-} 
+}
 
 #picwaterfall{
    width:100%;
-   height:auto;
+   height:100%;
+   /*background-color: pink;*/
    position:relative;
 }
 
@@ -88,11 +105,13 @@ a{
 	 height:60px;
 	 background-color: #fff;
 	 box-shadow: 0 0 10px 3px #ccc;
-	 opacity: 0.8;
+	 opacity: 0.5;
      cursor: pointer;
      position:fixed;
-     right:20%;
-     top:50%;
+     left:85%;
+     bottom:20%;
+     /*right:20%;
+     top:50%;*/
      z-index: 900;
 
      font-family: "imooc-icon";

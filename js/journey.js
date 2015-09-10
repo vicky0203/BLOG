@@ -16,12 +16,14 @@ $( window ).on( "load", function(){
     // }, 1500);
     
 
+    $("#wrap").animate({"height":'toggle'},"2");
+
 
 	//picsplay
 	var contents = $(".content");
 	var pics = $(".pics");
 	var linum = $(".pics li").length / contents.length;
-	var movelength = 250;
+	var movelength = 550; //250;
 	//var movelength = $(".box").eq(0).height();
 	//console.log(linum);
 	// console.log(num1 + "aaaa"+ num2 + "bbb" + num3);
@@ -35,7 +37,8 @@ $( window ).on( "load", function(){
         	index=0;
         }
         for(var i=0;i<pics.length;i++){
-        	pics.eq(i).animate({marginTop:-index*movelength + "px"},1500);
+        	// pics.eq(i).animate({marginTop:-index*movelength + "px"},1500);
+            pics.eq(i).animate({marginLeft:-index*movelength + "px"},1500);
         }
 	},3000);
 
