@@ -4,13 +4,13 @@ $(function(){
         var activetitle = $(this);
         if(activetitle.hasClass("active")){
             console.log("aaa");
-             activetitle.next().fadeOut("1000");
+             activetitle.nextAll().fadeOut("1000");
              activetitle.children("span").text("+");
              activetitle.children("i").css("background-position","0 -45px");
              activetitle.removeClass("active");
         }else{
              activetitle.addClass("active");
-             activetitle.next().fadeIn("1000");
+             activetitle.nextAll().fadeIn("1000");
              activetitle.children("span").text("-");
              activetitle.children("i").css("background-position","0 0");
         }

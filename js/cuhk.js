@@ -2,39 +2,40 @@ $(window).on("load",function(){
     
     menu();
     
-    var imgsdata = {'data':[ {'src':'18.jpg'},{'src':'19.jpg'},{'src':'20.jpg'},
-							 {'src':'21.jpg'},{'src':'22.jpg'},{'src':'23.jpg'},
-							 {'src':'24.jpg'},{'src':'25.jpg'},{'src':'26.jpg'},
-							 {'src':'27.jpg'},{'src':'28.jpg'}] };	//json get from remote server
-
-/*      $.ajax({
-        url:"./js/cuhk.json",
-        type:"GET",
-        success:function(data,status){
-            $.each(data.imgsdata, function(index, item){
-            console.log(index + "aaaa" + item.src);
-          });
-        }
-      });*/
-    $.getJSON("./js/cuhk.json",function(data){
-          $.each(data.imgsdatatest, function(index, item){
-            console.log(index + "aaaa" + item.src);
-          });
-    });
-
-
     setWaterFall();	// initial page				 
+    
+    $(".morepics").click(function(){
+        $.ajax({
+            type:"GET",
+            url: "./js/cuhk.json",
+            // data: picNum, used to get fixed number pics from one date file    var picNum = 5;
+            dataType:"json",
+            cache: false, 
+            error:function(XMLHttpRequest){
+                  alert(XMLHttpRequest.status);
+            },
+            success: dealpics
+        });
+    });
+   
+});
 
-    $(".morepics").click(function(){  //load more pictures icon control
-    	 $.each(imgsdata.data,function(index,value){
-        console.log(index);
-          var newBox = $('<div>').addClass('box').appendTo( $('#picwaterfall') );
-    		  var newPic = $('<div>').addClass('pic').appendTo(newBox);
-    		  $('<img>').attr('src','images/' + $(value).attr('src') ).appendTo(newPic);  
-    	 });
-    	 setWaterFall();
-    });    
-})
+function dealpics(data){
+    var json = eval(data);
+    var data = "";
+    $.getJSON("./js/cuhk.json",function(data){
+        $.each(json.imgsdatatest, function(index, item){
+            // console.log(index + "aaaa" + item.src);
+            var newBox = $('<div>').addClass('box').appendTo( $('.picwaterfall') );
+            var newPic = $('<div>').addClass('pic').appendTo(newBox);
+            $('<img>').attr('src','images/' + $(item).attr('src') ).appendTo(newPic);
+        });
+        setWaterFall();
+    }); 
+}
+
+
+
 
 function menu(){
     $(".menuicon").mouseover(function(){
@@ -46,12 +47,13 @@ function menu(){
      });
 }
 
+
 function setWaterFall(){
-	var divs = $(".box");
-	var picwidth = divs.eq(0).outerWidth(true);
-	// console.log(divs.eq(0).outerHeight(true) + "ddd" + divs.eq(0).height()); 
-	var colNum = Math.floor( $("#picwrap").width()/picwidth );
-    //console.log(colNum);
+    var divs = $(".box");
+    var picwidth = divs.eq(0).outerWidth(true); /*返回元素的宽度（包括内边距、边框和外边距）*/
+    // console.log(divs.eq(0).outerHeight(true) + "ddd" + divs.eq(0).height()); 
+    var colNum = Math.floor( $(".picwrap").width()/picwidth );
+      //console.log(colNum);
 
     var pinHArr = [];//sum heights for each columns 
 
@@ -69,6 +71,7 @@ function setWaterFall(){
           	 "left": divs.eq(minHIndex).position().left,
           });
           pinHArr[ minHIndex ] += divs.eq( index ).outerHeight(true);
+          $(".picwrap").height += minH;//increase the screen height and sroll the screen
        }
     });
 }

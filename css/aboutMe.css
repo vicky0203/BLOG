@@ -17,6 +17,8 @@ ul,li{list-style:none;}
 	-ms-box-shadow:  0 0 15px 5px #000, 0 0 40px rgba(0,0,0,0.5) inset;
 	-o-box-shadow:  0 0 15px 5px #000, 0 0 40px rgba(0,0,0,0.5) inset;
 	-moz-box-shadow:  0 0 15px 5px #000, 0 0 40px rgba(0,0,0,0.5) inset;
+
+	overflow: hidden;
 }
 
 /*-----head-----*/
@@ -33,6 +35,8 @@ ul,li{list-style:none;}
 	/*background-color: red;*/
 	border-right: 3px solid #043E55;
 	overflow: hidden;
+
+	float: left;
 }
 
 .propics{
@@ -68,7 +72,14 @@ ul,li{list-style:none;}
 }
 
 
-
+.hinfo{
+	width: 800px;
+	height: 100px;
+	margin-right: 20px;
+	margin-top: 20px;
+	float: right;
+	text-align: right;
+}
 
 
 /*-----foot-----*/
@@ -84,6 +95,7 @@ ul,li{list-style:none;}
 	min-height: 800px;
 	height:auto;
 	width:100%;
+	line-height: 1.5em;
 }
 
 .chapter{
@@ -131,9 +143,30 @@ ul,li{list-style:none;}
 }
 
 
+
 /*-----content ul info-----*/
+.subinfo{
+	width: 100%;
+	height: 25px;
+	margin-left: 20px;
+}
+
+.subinfo .subtitle{
+	  width: auto;
+	  height:100%;
+	  float: left;
+}
+
+.subinfo .subtime{
+	  width: auto;
+	  height: 100%;
+      float: right;
+      margin-right: 30px;
+} 
+
+
 .info{
-    margin-left:25px; 
+    margin-left:20px; 
 }
 
 .info li{
