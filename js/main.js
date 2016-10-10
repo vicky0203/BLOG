@@ -1,64 +1,101 @@
-$(function() {
-    var list = $("#list li");
-    var index = 0; // begin with 0, end with 4
-    var timer = null;
+var num = $(".carousel-img").length;
+var previous = 0;
+var current = 0;
 
-    //console.log(winh);
-    autoplay();
+$(document).ready(function() {
 
-    $("#wrap").mouseover(function(){// 鼠标划过整个容器时停止自动播放
-        clearInterval(timer);
-    });
+    $(".carousel ul li").click(function(){
+        var i = $(this).val();
+        if(i+1 > num) return;
+        current = i;
+
+        console.log('previous:' + previous + ", " + "current: " + current + ", " + "i: " + i);
+
+        $(".carousel-img").eq(previous).hide("normal");
+        $(".carousel-img").eq(i).show("normal");
+
+        $(this).toggleClass("on");
+        $(this).siblings().removeClass("on");
+    }); 
+
+    //var timer = setInterval("autoShowImage()", 2000);
+
+    //setTimeout(autoShowImage(1), 4000);
+
+    // $(".carousel ul").hover(function(){
+    //     clearInterval(timer);
+    // },function(){
+    //     timer = setInterval("autoShowImage()", 2000);
+    // });
+
+
+    // var list = $("#list li");
+    // var index = 0; // begin with 0, end with 4
+    // var timer = null;
+
+    // //console.log(winh);
+    // autoplay();
+
+    // $("#wrap").mouseover(function(){// 鼠标划过整个容器时停止自动播放
+    //     clearInterval(timer);
+    // });
         
-    $("#wrap").mouseout(function(){// 鼠标划过整个容器时停止自动播放 
-        autoplay();
-    });
+    // $("#wrap").mouseout(function(){// 鼠标划过整个容器时停止自动播放 
+    //     autoplay();
+    // });
 
     
-    for(var j=0;j<list.length;j++){
-        list[j].id=j;
-        //console.log(list[j].getElementsByTagName("a")[0] + "BBB" + list[j].id);
-        //var a  = list[j].getElementsByTagName("a")[0];
-        list[j].onclick = function(){
-            console.log(this);
-             change(this.id); 
-        }
-    }
+    // for(var j=0;j<list.length;j++){
+    //     list[j].id=j;
+    //     //console.log(list[j].getElementsByTagName("a")[0] + "BBB" + list[j].id);
+    //     //var a  = list[j].getElementsByTagName("a")[0];
+    //     list[j].onclick = function(){
+    //         console.log(this);
+    //          change(this.id); 
+    //     }
+    // }
 
 
-    function autoplay(){
-    	timer = setInterval(function() {
-    		index++;
-            console.log("aaaa" + index);
-            if(index>=list.length){
-               index=0;
-            }
-            change(index);
-        }, 3000);    
-    }
-    /*    		if(index<list.length){ // why it still run this part after the index is equalt to list.length ??
-    			index++;
-    			console.log("aaa"+index);
-    			change(index);
-    			console.log("ccc"+index);
-    		}else if(index==list.length){
-    			index = 0;
-    			console.log("bbb"+ index);
-    			change(index);
-    			clearInterval(timer);
-    		}
-    	}, 1500);
-        console.log("ddd"+index);*/
+    // function autoplay(){
+    // 	timer = setInterval(function() {
+    // 		index++;
+    //         console.log("aaaa" + index);
+    //         if(index>=list.length){
+    //            index=0;
+    //         }
+    //         change(index);
+    //     }, 3000);    
+    // }
+    // /*    		if(index<list.length){ // why it still run this part after the index is equalt to list.length ??
+    // 			index++;
+    // 			console.log("aaa"+index);
+    // 			change(index);
+    // 			console.log("ccc"+index);
+    // 		}else if(index==list.length){
+    // 			index = 0;
+    // 			console.log("bbb"+ index);
+    // 			change(index);
+    // 			clearInterval(timer);
+    // 		}
+    // 	}, 1500);
+    //     console.log("ddd"+index);*/
 
-    function change(currentIndex){
-        var winh = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-    	$("#pic").animate({marginTop: -winh*currentIndex + "px"},1500);      
-        for(var i=0;i<list.length;i++){
-        	list[i].className=" ";
-        }
-        list[currentIndex].className = "liston";
-        console.log(currentIndex);
-        index=currentIndex;
-    }   
+    // function change(currentIndex){
+    //     var winh = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    // 	$("#pic").animate({marginTop: -winh*currentIndex + "px"},1500);      
+    //     for(var i=0;i<list.length;i++){
+    //     	list[i].className=" ";
+    //     }
+    //     list[currentIndex].className = "liston";
+    //     console.log(currentIndex);
+    //     index=currentIndex;
+    // } 
 
 });
+
+function autoShowImage(){
+    current = (current >= (num -1)) ? 0 : ++current;
+    previous = (current == (num - 1))  ? 0 : --current;
+
+    $(".carousel ul li").eq(current).trigger('click');
+}
