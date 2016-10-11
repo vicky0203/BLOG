@@ -219,13 +219,14 @@ li a:visited, li a:hover{
 	margin-bottom: 60px;
 }
 
+/* -----------journey */
+
 .carousel-wrap{
-	height: 400px;  
-    background: pink; 
+	height: 100%;
 }
 
 .carousel{
-	height: 80%;
+	height: 320px;
 	margin-top: 50px;
 
 	position: relative;
@@ -245,7 +246,7 @@ li a:visited, li a:hover{
 	width: 10px;
 	height: 10px;
 	border-radius: 10px;
-	background: #ccc;
+	background: white;
 	margin-right: 5px;
 
 	-moz-box-shadow:0px 2px 3px #6E6E6E; 
@@ -256,7 +257,7 @@ li a:visited, li a:hover{
 }
 
 .carousel ul li.on{
-	background: white;
+	background: #EBBAAD;
 }
 
 
@@ -292,11 +293,100 @@ li a:visited, li a:hover{
     background: yellow; 
 }
 
+/* ---------------music */
+
+.introduction{
+	background: rgba(235, 186, 173, 0.6);
+	padding: 50px 30px;
+	overflow: hidden;
+}
+
+
+.albums .cover-wrap{
+	display: block;
+
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+
+	position: relative;
+
+	cursor: pointer;
+
+	-webkit-box-shadow: 0 0 10px #333;
+	box-shadow: 0 0 10px #333;
+}
+
+.albums .cover{
+	width: 100%;
+	height: auto;
+}
+
+.albums .info{
+	text-align: center;
+}
+
+.albums .play{
+   font-size: 40px;
+   color: rgba(255, 255, 255, 0.8);
+   text-shadow: 2px 2px 5px #ccc;
+   position: absolute;
+   right: 10px;
+   bottom: 10px;
+}
+
+.albums .cover-wrap:hover .play{
+	color: #EBBAAD;
+}
+
+/* ----------------footer */
 
 .footer-wrap{
 	background: #192332;
-	height: 200px;
+	color: #c8c8c8;
+	min-height: 150px;
 }
+
+.footer-wrap .logo{
+	height: 100%;
+}
+
+.footer-wrap .logo i{
+    display: block;
+    font-size: 30px;
+    color: white;
+    margin: 60px auto;
+    width: 30px;
+}
+
+.footer-wrap .sitemap{
+	height: 100%;
+	padding-top: 50px;
+}
+
+
+.footer-wrap .sitemap .links a{
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: #c8c8c8;
+    display: block;
+    font-weight: 600;
+}
+
+.footer-wrap .sitemap .icons{
+	padding-top: 15px;
+}
+
+.footer-wrap .sitemap .icons a{
+	font-size: 20px;
+	margin-right: 20px;
+	color: #c8c8c8;
+}
+
+
+
+
+/* ------------ media query */
 
 .menu, .mask{
 	display: none;
