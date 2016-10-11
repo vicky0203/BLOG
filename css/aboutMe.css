@@ -1,92 +1,41 @@
-*{padding:0; margin:0;}
-
-body{
-   background-color: #043E55;
-}
-
-ul,li{list-style:none;}
-
 #wrap{
-	width:1000px;
-	min-height: 900px;
-	height:auto;
-	margin:0 auto;
-	background-color: #fff;
-	box-shadow: 0 0 15px 5px #000, 0 0 40px rgba(0,0,0,0.5) inset;
-	-webkit-box-shadow:  0 0 15px 5px #000, 0 0 40px rgba(0,0,0,0.5) inset;
-	-ms-box-shadow:  0 0 15px 5px #000, 0 0 40px rgba(0,0,0,0.5) inset;
-	-o-box-shadow:  0 0 15px 5px #000, 0 0 40px rgba(0,0,0,0.5) inset;
-	-moz-box-shadow:  0 0 15px 5px #000, 0 0 40px rgba(0,0,0,0.5) inset;
-
-	overflow: hidden;
+	box-shadow: 0 0 20px #000, 0 0 20px rgba(0,0,0,0.5) inset;
+	-webkit-box-shadow:  0 0 20px #000, 0 0 20px rgba(0,0,0,0.5) inset;
+	-ms-box-shadow:  0 0 20px #000, 0 0 20px rgba(0,0,0,0.5) inset;
+	-o-box-shadow:  0 0 20px #000, 0 0 20px rgba(0,0,0,0.5) inset;
+	-moz-box-shadow:  0 0 20px #000, 0 0 20px rgba(0,0,0,0.5) inset;
 }
 
 /*-----head-----*/
-#header{
-	height:150px;
-	width:100%;
-	background-color: rgba(56,120,189,0.4);
-	border-bottom: 3px solid #043E55; 
+#header{ 
+	border-bottom: 2px solid #043E55; 
+	padding: 10px 15px;
+
+	position: relative;
 }
-
-.pro{
-	width: 150px;
-	height: 150px;
-	/*background-color: red;*/
-	border-right: 3px solid #043E55;
-	overflow: hidden;
-
-	float: left;
-}
-
-.propics{
+ 
+#header .propic{
 	display: block;
-	width:auto;
-	height:auto;
 	text-align: center;
-	/*background-color: pink;*/
-	opacity: 0.6;
-	font-size: 800%;
-	margin-top: 10px;
-	margin-left: 5px;
+	font-size: 50px;
+	margin: 30px auto;
 }
 
-
-@font-face {
-	font-family:"imooc-icon";
-	src:url("../fonts/icomoon.eot") format("embedded-openype"),  /*IE9兼容模式*/
-	    url("../fonts/icomoon.eot?#iefix") format("embedded-openype"),
-	    url("../fonts/icomoon.woff") format("woff"),
-	    url("../fonts/icomoon.ttf") format("truetype"),
-	    url("../fonts/icomoon.svg") format("svg");
-	font-weight: normal;
-	font-style: normal;
-}
-
-.imooc-icon{
-	font-family: "imooc-icon";
-	font-style: normal;
-	font-weight: normal;
-	-webkit-font-smoothing:antialiased;
-	-moz-osx-font-smoothing:grayscale;
-}
-
-
-.hinfo{
-	width: 800px;
-	height: 100px;
-	margin-right: 20px;
-	margin-top: 20px;
-	float: right;
+#header .info{
 	text-align: right;
+	margin-top: 15px;
 }
 
+#email{
+	margin-left: 20px;
+}
 
-/*-----foot-----*/
-#footer{
-	height:100px;
-	width:100%;
-	background-color: #000;
+#language{
+	font-weight: 800;
+	position: absolute;
+
+	top: 10px; 
+	right: 30px;
 }
 
 
@@ -94,38 +43,28 @@ ul,li{list-style:none;}
 #content{
 	min-height: 800px;
 	height:auto;
-	width:100%;
 	line-height: 1.5em;
-}
-
-.chapter{
-	width:100%;
-	height:auto;
-/*	background-color: green;*/
 }
 
 
 /*-----content title-----*/
-.title{
-	display: block;
-	width:100%;
-	height:40px;   /*height = line-height chuizhijuzhong*/
+#content .title{
+	height: 40px;
 	line-height: 40px;
-/*	background-color: pink;*/
 	overflow: hidden;
 	cursor: pointer;
     font-size: 18px;
 }
 
-.title:hover{
-	background-color: rgba(4,62,85,0.7);
+#content .title:hover{
+	background-color: #99CCFF;
 }
 
-.chapter .title i{
+.chapter .title .title-icon{
 	display: inline;
 	float: left;
 	width:20px;
-	height:100%;
+	height:20px;
 	margin:10px;
 	background-image: url("../images/learnicon.png");
 	background-position: 0 0;
@@ -133,163 +72,85 @@ ul,li{list-style:none;}
 	overflow: hidden;
 }
 
-.chapter .title span{
-	display: inline-block;
-	width:40px;
-	height:100%;
+.chapter .title .hide-info-icon, .chapter .title .show-info-icon{
 	float: right;
-	text-align: center;
-	font-weight: bold;
+	margin: 10px;
 }
 
-
-
-/*-----content ul info-----*/
-.subinfo{
-	width: 100%;
-	height: 25px;
-	margin-left: 20px;
-}
-
-.subinfo .subtitle{
-	  width: auto;
-	  height:100%;
-	  float: left;
-}
-
-.subinfo .subtime{
-	  width: auto;
-	  height: 100%;
-      float: right;
-      margin-right: 30px;
-} 
-
-
-.info{
-    margin-left:20px; 
-}
-
-.info li{
-    list-style:square;
-    list-style-position: inside;
-
-    width:100%;
-    inline-height:20px;
-}
-
-
-
-/*--------menu----------*/
-.menu{
-	/*border:5px solid red;*/
-	width:200px;
-	height:auto;
-	position:fixed;
-	top:30px;
-	right:40px;
-	z-index: 1000;
-}
-
-.imooc-icon{
-	font-family: "imooc-icon";
-	font-style: normal;
-	font-weight: normal;
-	-webkit-font-smoothing:antialiased;
-	-moz-osx-font-smoothing:grayscale;
-	cursor:pointer;
-}
-
-
-/*-----menuicon-------*/
-@font-face {
-	font-family:"imooc-icon";
-	src:url("../fonts/icomoon.eot") format("embedded-openype"), /*IE9兼容模式*/
-	    url("../fonts/icomoon.eot?#iefix") format("embedded-openype"),
-	    url("../fonts/icomoon.woff") format("woff"),
-		url("../fonts/icomoon.ttf") format("truetype"),
-		url("../fonts/icomoon.svg") format("svg");
-	font-weight: normal;
-	font-style: normal;
-}
-
-.menuicon{
-    display: block;
-    width: 50px;
-    height: 40px;
-    margin-left:150px;
-    /*background-color: yellow;*/
-    font-size: 40px;
-	color:#ccc;
-}
-
-
-/*-----menubar-----*/
-.menubar{
-	width:100%;
-	height:auto;
-	background-color: rgba(0,0,0,0.6);
-	border-radius: 10px;
-	box-shadow:0 0 10px 5px rgba(90,90,90,0.6);
-/* 0 0 20px 5px rgba(255,255,255,0.5) inset, */
-    position: relative;
-
-    display: none;
-}
-
-.menubar a{
-	text-decoration: none;
-	color:#fff;
-	display: block;
-	font-weight: 600;
-}
-
-.closeicon{
-	display: block;
-	width:30px;
-	height:30px;
-	position: absolute;
-	top:5px;
-	left:3px;
-	/*background-color: green;*/
-	color:#ccc;
-	font-size: 16px;
-	text-align: center;
-}
-
-/*---------first-calss menu---------*/
-.menubar ul{
-   width:100%;
-   height:auto;
-}
-
-.menubar ul li{
-	width:100%;
-	height:auto;
-	min-height: 40px;
-}
-
-.menubar ul li:hover{
-	box-shadow: 0 0 20px rgba(255,255,255,0.6);
-}
-
-.menubar ul li a{
-	width:100%;
-	height:40px;
-	text-align: center;
-	vertical-align:bottom;
-	font-size: 17px;   /*字体*/
-}
-
-/*---------second-calss menu---------*/
-.menubar ul li ul{
+.chapter .title .show-info-icon{
 	display: none;
 }
-
-.menubar ul li:hover ul{
-	display: block;
+ 
+.chapter .subinfo span{
+	display: inline-block;
 }
 
-.menubar ul li ul li{
-	background-color: rgba(120,120,120,0.4);
-} 
+.chapter .subinfo .subtime{
+	text-align: right;
+}
 
+.chapter .points{
+    padding: 0 40px;
+}
+
+
+
+
+/* ----------------footer */
+
+.footer-wrap{
+	background: #192332;
+	color: #c8c8c8;
+	min-height: 150px;
+}
+
+.footer-wrap .logo{
+	height: 100%;
+}
+
+.footer-wrap .logo i{
+    display: block;
+    font-size: 30px;
+    color: white;
+    margin: 60px auto;
+    width: 30px;
+}
+
+.footer-wrap .sitemap{
+	height: 100%;
+	padding-top: 50px;
+}
+
+
+.footer-wrap .sitemap .links a{
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: #c8c8c8;
+    display: block;
+    font-weight: 600;
+}
+
+.footer-wrap .sitemap .icons{
+	padding-top: 15px;
+}
+
+.footer-wrap .sitemap .icons a{
+	font-size: 20px;
+	margin-right: 20px;
+	color: #c8c8c8;
+}
+
+
+
+
+
+/* ------------ media query */
+.container{
+	height: auto;
+}
+
+@media (min-width: 1600px) {
+  .container {
+    width: 1400px;
+  }
+}

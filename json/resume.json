@@ -1,0 +1,14 @@
+getResume({
+   "en" : {
+   		"name" : "QIANG WEI",
+   		"asdf" : "sdfdsf", 
+   		"sdf" : [
+   			{"name" : "QIANG WEI"}, 
+   			{"asdf" : "sdfdsf"}
+   		]
+   	},
+   	"zh_cn" : {
+   		"name" : "强薇",
+   		"sdfdf" : "卓欧",
+   	}
+})
