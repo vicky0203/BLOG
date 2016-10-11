@@ -1,4 +1,4 @@
-$(function(){
+$(document).ready(function(){
     $(".title").click(function(){
         // console.log(this);
         var activetitle = $(this);
@@ -23,5 +23,18 @@ $(function(){
     });
     $(".closeicon").click(function(){
         $(".menubar").animate({"height":'toggle'},"1");
+    });
+
+    $.ajax({
+        type: "GET",
+        url: "/resume_en.json",
+        dataType: "json",
+        success: function(data){
+            console.log(data);
+        },
+        error: function(data){
+            alert('error');
+        }
+
     });
 });
