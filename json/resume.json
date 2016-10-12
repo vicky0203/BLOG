@@ -1,142 +1,14 @@
 getResume({
    "en" : {
-   		"name"    : "QIANG WEI",
-   		"phone"   : "Cell Phone: 13752441517", 
-   		"email"   : "E-mail: qweivicky@163.com", 
-   		"chapters" : [
-   			{
-   				"title"	 : "TECHNICAL SKILLS",
-   				"points" : ["Languages: C++, Java", "Web Technologies: HTML, CSS, Bootstrap, JavaScript, JQuery, AngularJS, CoffeeScript, JSP, XML, Ruby on Rails", 
-   							"Database/Environment: MySQL, PostgreSQL, Oracle, JDBC", "Operating Systems: Windows, Linux, Android", "Version Control System: GitHub"]
-   			},{
-   				"title"	  : "EDUCATION",
-   				"subinfo" : [
-   								{
-   									"subtitle"  : "The Chinese University of Hong Kong",
-   									"subtime"   : "09/2014 - 08/2015",
-   									"subpoints" : ["Master of Science in E-Commerce and Logistics Technologies"]
-   								},{
-   									"subtitle"  : "Tianjin University, Tianjin, China", 
-   									"subtime"   : "09/2010 - 07/2014",
-   									"subpoints" : ["Bachelor of Engineering in Software Engineering"]
-   								}
-   							]
-   			},{
-   				"title"	  : "WORK EXPERIENCE",
-   				"subinfo" : [
-   								{
-   									"subtitle" : "Software Developer",
-   									"subtime"  : "10/2015 – 07/2016"
-   								},{
-   									"subtitle" : "EC Property (HK) Limited", 
-   									"subtime"  : "Hong Kong"
-   								}
-   							],
-   				"points"  : [
-   								"Achieved responsive web pages from static page to dynamic information display with pagination in Bootstrap, AngularJS, CofeeScript, Rails and etc. Optimized the layout of the entire web page to make production more impressive and practical",
-   								"Implemented B/E function modules such as user settings, page view log, automatic Email Direct Marketing service with Sidekiq and SendGrid which completely replace manual operation, and etc.",
-   								"Participate in Android App development, implemented Deep Link and a complete information query, processing module base on web application API",
-   								"Regularly test new function with particular test case on various PC platform and mobile terminal to make sure availability and fluency of production, analyzed and debugged production issues",
-   								"Analyzed user behavior and requirement base on statistical data, take part in function flow design and UX design",
-   				]
-   			},{
-   				"title"	  : "PROJECTS",
-   				"subinfo" : [
-   								{
-   									"subtitle" : "Data Archive System",
-   									"subtime"  : "03/2014 - 06/2014",
-   									"subpoints"   : [
-   													"Designed and implemented a J2EE Web application and achieved relational databases backup for data with any table structures",
-   													"Analyzed user requirements with UML, designed system architecture and data structure as well as configure software environment on PC with Tomcat and Oracle RDBMS 11g",
-   													"Front-end developed with JSP, HTML, JavaScript, JQuery and back-end developed with Java, JavaBean, Servlet, JDBC, AJAX, XML, DOM4J and Log4J"
-   												 ]
-   								},{
-   									"subtitle" : "Oracle Workforce Development Program, Tianjin, China", 
-   									"subtime"  : "05/2013 - 07/2013",
-   									"subpoints"   : [
-   													"Unattended install Linux system with predetermined configurations on PC by using the Kickstart method of RHEL6 system in a virtual machine environment",
-   													"Deployed the RAC(Oracle Real Application Clusters), VDI(Virtual Desktop Infrastructure) and SGD(Secure Global Desktop) based on the Linux and Solaris10 system in a virtual machine environment"
-   												 ]
-   								},{
-   									"subtitle" : "Battery Signal Visualization Project", 
-   									"subtime"  : "05/2013",
-   									"subpoints"   : ["Developed a Windows Form application in C# and tested the structure of the whole software with specialized test cases by White-box testing and Black-box testing along with another team member"]
-   								}
-   							]
-   			},{
-   				"title"	 : "ADDITIONAL INFORMATION",
-   				"points" : [ "Personal Blog:  ", "Language: Mandarin (Native), English (ITLES 6.0), Cantonese(Basic)"]
-   			}
+   		"name" : "QIANG WEI",
+   		"asdf" : "sdfdsf", 
+   		"sdf" : [
+   			{"name" : "QIANG WEI"}, 
+   			{"asdf" : "sdfdsf"}
    		]
    	},
    	"zh_cn" : {
-   		"name"    : "强薇",
-   		"phone"   : "电话: (+86) 137-5244-1517", 
-   		"email"   : "邮箱: qweivicky@163.com", 
-   		"chapters" : [
-   			{
-   				"title"	 : "专业技能",
-   				"points" : ["计算机语言: C++, Java", "Web技术: HTML, CSS, Bootstrap, JavaScript, JQuery, AngularJS, CoffeeScript, JSP, XML, Ruby on Rails", 
-   							"数据库: MySQL, PostgreSQL, Oracle, JDBC", "操作系统: Windows, Linux, Android", "版本控制系统: GitHub"]
-   			},{
-   				"title"	  : "教育背景",
-   				"subinfo" : [
-   								{
-   									"subtitle"  : "香港中文大学",
-   									"subtime"   : "09/2014 - 08/2015",
-   									"subpoints" : ["电子商贸与物流技术理学硕士，硕士"]
-   								},{
-   									"subtitle"  : "天津大学", 
-   									"subtime"   : "09/2010 - 07/2014",
-   									"subpoints" : ["软件工程工学学士，本科"]
-   								}
-   							]
-   			},{
-   				"title"	  : "工作经历",
-   				"subinfo" : [
-   								{
-   									"subtitle" : "软件开发工程师",
-   									"subtime"  : "10/2015 – 07/2016"
-   								},{
-   									"subtitle" : "搵楼易（地产网）有限公司 EC Property (HK) Limited", 
-   									"subtime"  : "香港"
-   								}
-   							],
-   				"points"  : [
-   								"实现了多个响应式布局的网页，从静态网页到动态分页数据展示， 主要利用Bootstrap, AngularJS, CofeeScript, Rails 等技术。优化整个网站系统的网页布局， 使整个产品更具可观性和实用性。",
-   								"实现了一些后台功能模块例如用户设置，页面访问量记录，基于Sidekiq 和SendGrid 的自动化EDM电子邮件营销系统等，该系统上线后完全取代了人工邮件发送。",
-   								"参与Android 应用开发， 实现了产品应用与其他平台的深层链接（Deep Link）， 以及利用产品web平台提供的API开发了一个完整的信息查询、处理功能模块。",
-   								"在多种PC平台和移动端定期对产品可用性、流畅性等进行测试， 分析并修复遇到的问题。",
-   								"根据产品统计数据分析用户行为和需求，参与产品功能流程设计和UX设计。"
-   				]
-   			},{
-   				"title"	  : "项目经历",
-   				"subinfo" : [
-   								{
-   									"subtitle" : "数据自动归档系统",
-   									"subtime"  : "03/2014 - 06/2014",
-   									"subpoints"   : [
-   													"设计并开发了一个J2EE Web应用系统，该系统实现了利用图形化视图网页应用，对拥有任意数据表结构的关系型数据库备份。",
-   													"利用UML统一建模语言分析用户需求，设计系统框架和数据结构，以及利用Tomcat 和Oracle 关系数据库管理系统在PC端配置软件开发环境。",
-   													"使用JSP, HTML, JavaScript, JQuery 等进行前端网页开发， 后台开发以Java为主，同时利用了JavaBean, Servlet, JDBC, AJAX, XML, DOM4J, Log4J等技术。"
-   												 ]
-   								},{
-   									"subtitle" : "Oracle职业发展力计划，天津", 
-   									"subtime"  : "05/2013 - 07/2013",
-   									"subpoints"   : [
-   													"在虚拟系统环境下，利用RHEL6系统Kickstart 技术进行带有预设值的Linux 操作系统的网络无值守安装。",
-   													"在Linux和Solaris10虚拟机系统环境中，部署Oracle RAC(Oracle Real Application Clusters), 虚拟桌面化技术VDI(Virtual Desktop Infrastructure) 和安全全球桌面技术SGD(Secure Global Desktop)。"
-   												 ]
-   								},{
-   									"subtitle" : "电池测量两路信号同时显示系统", 
-   									"subtime"  : "05/2013",
-   									"subpoints"   : ["利用C#语言开发了一个Windows 窗体应用程序， 实现了将电池信号数据实时以数据曲线的形式呈现。"]
-   								}
-   							]
-   			},{
-   				"title"	 : "其他",
-   				"points" : [ "个人网站:  ", "语言: 雅思6.0，粤语"]
-   			}
-   		]
+   		"name" : "强薇",
+   		"sdfdf" : "卓欧",
    	}
 })
