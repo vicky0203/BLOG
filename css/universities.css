@@ -1,251 +1,75 @@
-*{padding: 0;margin: 0;}
-
-body{ 
-	background: url("../images/bg01.jpg");
+#universities{
+	box-shadow: 0 0 5px black;
 }
 
-ul,li{ list-style: none;}
-a{text-decoration: none; display: block;}
-
-
-/*-----content-----*/
-.wrap{
-	width: 1200px;
-	height: 700px;
-	margin: 100px auto;
+.section-title{
+	margin: 50px -15px;
 }
 
 .tju{
-	width:100%;
-	height: 350px;
-	/*border: 3px solid #01518E;*/
-	background-image: -webkit-gradient(linear,30% 0, right 0,from(#01518E),to(#fff) );
-	background-image: -moz-linear-gradient(to right,#01518E 20%,#fff 100%);
-	background-image: -o-linear-gradient(to right,#01518E 20%,#fff 100%);
-	box-shadow: -10px -10px 10px 3px rgba(1,81,142,0.5);
-
-	overflow: hidden;
-
-	margin-left: -100px;
-
-    -webkit-animation: fromleft 1s ease-in-out backwards;
-    -moz-animation: fromleft 1s ease-in-out backwards;
-    -ms-animation: fromleft 1s ease-in-out backwards;
-    -o-animation: fromleft 1s ease-in-out backwards;
-    animation: fromleft 1s ease-in-out backwards;
-    
-}
-
-
-@-webkit-keyframes fromleft{
-	0% {margin-left:-1000px;} 
-	100% {margin-left:-100px;}
-}
-@-moz-keyframes fromleft{
-	0% {margin-left:-1000px;} 
-	100% {margin-left:-100px;}
-}
-@-ms-keyframes fromleft{
-	0% {margin-left:-1000px;} 
-	100% {margin-left:-100px;}
-}
-@-o-keyframes fromleft{
-	0% {margin-left:-1000px;} 
-	100% {margin-left:-100px;}
+	border-top: 1px solid #ccc;
 }
 
 .cuhk{
-	width:100%;
-	height:350px;
-	/*border: 3px solid #6D1B6D;*/
-	background-image: -webkit-gradient(linear,30% 0, right 0,from(#fff),to(#6D1B6D) );
-	background-image: -moz-linear-gradient(to left,#6D1B6D 20%,#fff 100%); 
-	background-image: -o-linear-gradient(to left,#6D1B6D 20%,#fff 100%);
-	box-shadow: 10px 10px 10px 3px rgba(109,27,109,0.5);
-
-	overflow: hidden;
-
-	margin-left: 100px;
-
-    -webkit-animation: fromright 1s ease-in-out backwards;
-    -moz-animation: fromright 1s ease-in-out backwards;
-    -ms-animation: fromright 1s ease-in-out backwards;
-    -o-animation: fromright 1s ease-in-out backwards;
-    animation: fromright 1s ease-in-out backwards;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
 }
 
-@-webkit-keyframes fromright{
-	0% {margin-left:1000px;} 
-	100% {margin-left:100px;}
+.pic{
+	text-align: center;
 }
-@-moz-keyframes fromright{
-	0% {margin-left:1000px;} 
-	100% {margin-left:100px;}
-}
-@-ms-keyframes fromright{
-	0% {margin-left:1000px;} 
-	100% {margin-left:100px;}
-}
-@-o-keyframes fromright{
-	0% {margin-left:1000px;} 
-	100% {margin-left:100px;}
-}
-
-
-
-.pic{ width: 350px; height: 350px; overflow: hidden;}
 
 .pic a{
-	width: 250px; 
-	height: 250px;
-	margin: 50px;
-}
-
-.pic a img{
 	display: block;
-	width: 100%; 
-	height: 100%;
 }
 
 .letters{
-	width: 700px;
-	height: 100%;
-	margin-top: 30px;
+	padding: 0 50px;
 }
 
-.letters h1{margin-bottom: 30px;}
-.letters h4{margin-bottom: 10px;}
-
-
-
-
-.tju .pic{
-   float: left;
+#gallery{
+	padding: 0 50px;
+	margin-bottom: 50px;
+	position: relative;
 }
 
-.tju .letters{
-	float: left;
+#gallery .box{
+	display: inline-block;
+
+	padding: 5px;
+	box-shadow: 0 0 10px black;
+	margin: 2px;
+
+	float:left;
+} 
+
+
+/* ------------ media query */
+.container{
+	height: auto;
 }
 
-
-.cuhk .pic{ 
-	float: right;
-}
-.cuhk .letters{
-	float: right;
+#gallery .box img{
+	width: 200px; 
 }
 
-
-
-
-/*--------menu----------*/
-.menu{
-	/*border:5px solid red;*/
-	width:200px;
-	height:auto;
-	position:fixed;
-	top:30px;
-	right:40px;
-	z-index: 1000;
+@media (min-width: 992px){
+	#gallery .box img{
+	    width: 250px;
+    }
 }
 
-.imooc-icon{
-	font-family: "imooc-icon";
-	font-style: normal;
-	font-weight: normal;
-	-webkit-font-smoothing:antialiased;
-	-moz-osx-font-smoothing:grayscale;
-	cursor:pointer;
+@media (min-width: 1200px){
+	#gallery .box img{
+	    width: 250px;
+    }
 }
 
-
-/*-----menuicon-------*/
-@font-face {
-	font-family:"imooc-icon";
-	src:url("../fonts/icomoon.eot") format("embedded-openype"), /*IE9兼容模式*/
-	    url("../fonts/icomoon.eot?#iefix") format("embedded-openype"),
-	    url("../fonts/icomoon.woff") format("woff"),
-		url("../fonts/icomoon.ttf") format("truetype"),
-		url("../fonts/icomoon.svg") format("svg");
-	font-weight: normal;
-	font-style: normal;
-}
-
-.menuicon{
-    display: block;
-    width: 50px;
-    height: 40px;
-    margin-left:150px;
-    /*background-color: yellow;*/
-    font-size: 40px;
-	color:#ccc;
-}
-
-
-/*-----menubar-----*/
-.menubar{
-	width:100%;
-	height:auto;
-	background-color: rgba(0,0,0,0.6);
-	border-radius: 10px;
-	box-shadow:0 0 10px 5px rgba(90,90,90,0.6);
-/* 0 0 20px 5px rgba(255,255,255,0.5) inset, */
-    position: relative;
-
-    display: none;
-}
-
-.menubar a{
-	color:#fff;
-	font-weight: 600;
-}
-
-.closeicon{
-	display: block;
-	width:30px;
-	height:30px;
-	position: absolute;
-	top:5px;
-	left:3px;
-	/*background-color: green;*/
-	color:#ccc;
-	font-size: 16px;
-	text-align: center;
-}
-
-/*---------first-calss menu---------*/
-.menubar ul{
-   width:100%;
-   height:auto;
-}
-
-.menubar ul li{
-	width:100%;
-	height:auto;
-	min-height: 40px;
-}
-
-.menubar ul li:hover{
-	box-shadow: 0 0 20px rgba(255,255,255,0.6);
-}
-
-.menubar ul li a{
-	width:100%;
-	height:40px;
-	text-align: center;
-	vertical-align:bottom;
-	font-size: 17px;   /*字体*/
-}
-
-/*---------second-calss menu---------*/
-.menubar ul li ul{
-	display: none;
-}
-
-.menubar ul li:hover ul{
-	display: block;
-}
-
-.menubar ul li ul li{
-	background-color: rgba(120,120,120,0.4);
+@media (min-width: 1600px) {
+    .container {
+       width: 1400px;
+    }
+    #gallery .box img{
+	    width: 300px;
+    }
 }
