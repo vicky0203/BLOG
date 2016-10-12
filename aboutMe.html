@@ -19,7 +19,7 @@
     <script src="js/respond.min.js"></script>
 </head>
 <body>
-    <div id="wrap" class="container">
+    <!-- <div id="wrap" class="container">
         <div id="header" class="row">
             <div class="pro col-sm-2 col-md-2">
                 <i class="fa fa-graduation-cap propic" aria-hidden="true"></i>
@@ -59,12 +59,12 @@
                 </h3>
 
                 <p class="subinfo col-sm-12"><strong><span class="subtitle col-sm-9">The Chinese University of Hong Kong</span><span class="subtime col-sm-3">09/2014 - 08/2015</span></strong></p> 
-                <ul class="points col-sm-12">
+                <ul class="points col-sm-12 ">
                     <li>Master of Science in E-Commerce and Logistics Technologies</li> 
                 </ul>
                 
                 <p class="subinfo col-sm-12"><strong><span class="subtitle col-sm-9">Tianjin University, Tianjin, China</span><span class="subtime col-sm-3">09/2010 - 07/2014</span></strong></p>
-                <ul class="points col-sm-12">
+                <ul class="points col-sm-12 subinfo-points">
                     <li>Bachelor of Engineering in Software Engineering</li>
                 </ul>
             </div>
@@ -98,20 +98,20 @@
                 </h3>
 
                 <p class="subinfo col-sm-12"><strong><span class="subtitle col-sm-9">Data Archive System</span><span class="subtime col-sm-3">03/2014 - 06/2014</span></strong></p> 
-                <ul class="points col-sm-12">
+                <ul class="points col-sm-12 subinfo-points">
                     <li>Designed and implemented a J2EE Web application and achieved relational databases backup for data with any table structures</li>
                     <li>Analyzed user requirements with UML, designed system architecture and data structure as well as configure software environment on PC with Tomcat and Oracle RDBMS 11g</li>
                     <li>Front-end developed with JSP, HTML, JavaScript, JQuery and back-end developed with Java, JavaBean, Servlet, JDBC, AJAX, XML, DOM4J and Log4J</li>
                 </ul>
                 
                 <p class="subinfo col-sm-12"><strong><span class="subtitle col-sm-9">Oracle Workforce Development Program, Tianjin, China</span><span class="subtime col-sm-3">05/2013 - 07/2013</span></strong></p> 
-                <ul class="points col-sm-12">
+                <ul class="points col-sm-12 subinfo-points">
                     <li>Unattended install Linux system with predetermined configurations on PC by using the Kickstart method of RHEL6 system in a virtual machine environment</li>
                     <li>Deployed the RAC(Oracle Real Application Clusters), VDI(Virtual Desktop Infrastructure) and SGD(Secure Global Desktop) based on the Linux and Solaris10 system in a virtual machine environment</li>
                 </ul>
 
                 <p class="subinfo col-sm-12"><strong><span class="subtitle col-sm-9">Battery Signal Visualization Project</span><span class="subtime col-sm-3">05/2013</span></strong></p> 
-                <ul class="points col-sm-12">
+                <ul class="points col-sm-12 subinfo-points">
                     <li>Developed a Windows Form application in C# and tested the structure of the whole software with specialized test cases by White-box testing and Black-box testing along with another team member</li>
                 </ul>
             </div>
@@ -120,7 +120,7 @@
             <div class="chapter row">
                 <h3 class="title active col-sm-12">
                     <i class="title-icon"></i>
-                    <b>PROJECTS</b>
+                    <b>ADDITIONAL INFORMATION</b>
                     <i class="fa fa-minus-square hide-info-icon" aria-hidden="true"></i>
                     <i class="fa fa-plus-square show-info-icon" aria-hidden="true"></i>
                 </h3>
@@ -128,6 +128,117 @@
                 <ul class="points col-sm-12">
                     <li>Personal Blog:  <a href="http://vicky0203.github.io/BLOG" target="_blank">http://vicky0203.github.io/BLOG</a></li>
                     <li>Language: Mandarin (Native), English (ITLES 6.0), Cantonese(Basic)</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <div class="row footer-wrap" id="footer">
+               <div class="logo col-sm-12 col-md-4"><i class="fa fa-smile-o" aria-hidden="true"></i></div>
+               <div class="sitemap col-sm-12 col-md-8">
+                    <div class="links col-sm-12 col-md-6">
+                        <div class="col-sm-12 col-md-6">
+                            <a href="main.html">HOME</a>
+                            <a href="aboutMe.html">ABOUT ME</a>
+                            <a  href="universities.html">MY UNIVERSITIES</a>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <a href="journey.html"> JOURNEY</a>
+                            <a href="loading.html">LIFE</a>
+                        </div>
+                    </div>
+                    <div class="icons col-sm-12 col-md-6">
+                        <a href="https://github.com/vicky0203" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        <a href="http://blog.csdn.net/qweileen?viewmode=list" target="_blank"><i class="fa fa-commenting" aria-hidden="true"></i></a>
+                        <a href="" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                    </div>
+               </div>
+            </div>
+        </footer>
+    </div> -->
+
+    <div id="wrap" class="container">
+        <div id="header" class="row">
+            <div class="pro col-sm-2 col-md-2">
+                <i class="fa fa-graduation-cap propic" aria-hidden="true"></i>
+            </div>
+            <div class="info col-sm-10 col-md-10">
+                <h2 id="name"></h2>
+                <h5><span id="phone"></span>
+                    <span id="email"></span></h5>
+            </div>
+            <p id="language"><a href="javascript:loadResume('zh');" id="zh">中</a> | <a href="javascript:loadResume('en');" id="en">ENG</a></p>
+        </div>
+
+        <div id="content">
+            <div class="chapter row">
+                <h3 class="title active col-sm-12">
+                    <i class="title-icon"></i>
+                    <strong class="title-text"></strong>
+                    <i class="fa fa-minus-square hide-info-icon" aria-hidden="true"></i>
+                    <i class="fa fa-plus-square show-info-icon" aria-hidden="true"></i>
+                </h3>
+ 
+                <ul class="points col-sm-12"></ul>
+            </div>
+
+            <div class="chapter row">
+                <h3 class="title active col-sm-12">
+                    <i class="title-icon"></i>
+                    <strong class="title-text"></strong>
+                    <i class="fa fa-minus-square hide-info-icon" aria-hidden="true"></i>
+                    <i class="fa fa-plus-square show-info-icon" aria-hidden="true"></i>
+                </h3>
+
+                <div class="subinfo"><p class="col-sm-12"><strong><span class="subtitle col-sm-9"></span><span class="subtime col-sm-3"></span></strong></p><ul class="subpoints col-sm-12 "></ul></div>
+                
+                <div class="subinfo"><p class="col-sm-12"><strong><span class="subtitle col-sm-9"></span><span class="subtime col-sm-3"></span></strong></p><ul class="subpoints col-sm-12 "></ul></div>
+            </div>
+
+            <div class="chapter row">
+                <h3 class="title active col-sm-12">
+                    <i class="title-icon"></i>
+                    <strong class="title-text"></strong>
+                    <i class="fa fa-minus-square hide-info-icon" aria-hidden="true"></i>
+                    <i class="fa fa-plus-square show-info-icon" aria-hidden="true"></i>
+                </h3>
+
+                <div class="subinfo"><p class="col-sm-12"><strong><span class="subtitle col-sm-9"></span><span class="subtime col-sm-3"></span></strong></p></div>
+                <div class="subinfo"><p class="col-sm-12"><strong><a class="subtitle col-sm-9" href="http://onehouse.hk" target="_blank"></a><span class="subtime col-sm-3"></span></strong></p></div> 
+
+                <ul class="points col-sm-12"></ul>
+            </div>
+
+            <div class="chapter row">
+                <h3 class="title active col-sm-12">
+                    <i class="title-icon"></i>
+                    <strong class="title-text"></strong>
+                    <i class="fa fa-minus-square hide-info-icon" aria-hidden="true"></i>
+                    <i class="fa fa-plus-square show-info-icon" aria-hidden="true"></i>
+                </h3>
+
+                <div class="subinfo"><p class="col-sm-12"><strong><span class="subtitle col-sm-9"></span><span class="subtime col-sm-3"></span></strong></p> 
+                <ul class="subpoints col-sm-12 "></ul></div>
+                
+                <div class="subinfo"><p class="col-sm-12"><strong><span class="subtitle col-sm-9"></span><span class="subtime col-sm-3"></span></strong></p> 
+                <ul class="subpoints col-sm-12 "></ul></div>
+
+                <div class="subinfo"><p class="col-sm-12"><strong><span class="subtitle col-sm-9"></span><span class="subtime col-sm-3"></span></strong></p> 
+                <ul class="subpoints col-sm-12 "></ul></div>
+            </div>
+
+
+            <div class="chapter row">
+                <h3 class="title active col-sm-12">
+                    <i class="title-icon"></i>
+                    <strong class="title-text"></strong>
+                    <i class="fa fa-minus-square hide-info-icon" aria-hidden="true"></i>
+                    <i class="fa fa-plus-square show-info-icon" aria-hidden="true"></i>
+                </h3>
+
+                <ul class="points col-sm-12" id="additional">
+                    <li><span id="blog"></span><a href="http://vicky0203.github.io/BLOG" target="_blank">http://vicky0203.github.io/BLOG</a></li>
+                    <li id="add-lang"></li>
                 </ul>
             </div>
         </div>
@@ -163,21 +274,88 @@
     <script type="text/javascript">
         var en;
         var zh;
+        var data;
         function getResume(data) {
             en = data.en;
             zh = data.zh_cn;
         }
 
-        $(document).ready(function(){
-            // $("#en").click(function(){ loadResume("en");});
-            // $("#zh").click(function(){ loadResume("zh");});
-
-            $("#en").trigger('click');
-        });
+        window.onload = function(){
+            loadResume("en");
+        }
 
         function loadResume(lang){
+
             var data = (lang == 'zh') ? zh : en;
-            console.log(data);
+            
+            document.getElementById("name").innerHTML = data.name;
+            document.getElementById("phone").innerHTML = data.phone;
+            document.getElementById("email").innerHTML = data.email;
+
+            var chapters = document.getElementsByClassName("chapter");
+
+            for(var i = 0; i < data.chapters.length; i++){
+                loadChapter(chapters[i], data.chapters[i]);
+            }
+
+        }
+
+        function loadChapter(chapter, data){
+
+            if (chapter.children == null) return; 
+
+            var subinfoIndex = 0;
+ 
+            for(var i = 0; i < chapter.children.length ; i++){
+                //set title
+                if (chapter.children[i].nodeType == 1 && chapter.children[i].nodeName == "H3") {
+                    var title = chapter.children[i];
+                    for (var j = 0; j < title.children.length; j++) {
+                        if (title.children[j].nodeType == 1 && title.children[j].nodeName == "STRONG") { 
+                            title.children[j].innerHTML = data.title;
+                            break;
+                        }
+                    }
+                }else if (chapter.children[i].nodeType == 1 && chapter.children[i].getAttribute("class").indexOf("subinfo") > -1 ){
+                    //set subinfo
+                    var subinfo = chapter.children[i];
+
+                    var p = subinfo.children[0];
+                    var ul = subinfo.children[1];
+
+                    p.children[0].children[0].innerHTML = data.subinfo[subinfoIndex].subtitle;
+                    p.children[0].children[1].innerHTML = data.subinfo[subinfoIndex].subtime;
+
+                    loadList(ul, data.subinfo[subinfoIndex].subpoints);
+ 
+                    subinfoIndex++;
+
+                }else if(chapter.children[i].nodeType == 1 && chapter.children[i].getAttribute("class").indexOf("points") > -1){
+                    //set points
+                    var ul = chapter.children[i];
+                    if(ul.getAttribute("id") == "additional"){
+                        document.getElementById("blog").innerHTML = data.points[0];
+                        document.getElementById("add-lang").innerHTML = data.points[1];
+                    }else{
+                        loadList(ul, data.points);
+                    }
+                } 
+            
+
+            } 
+        }
+
+        function loadList(ul, data){
+            if (data) {
+                while (ul.hasChildNodes()) {
+                    ul.removeChild(ul.firstChild);
+                }
+                for (var m = 0; m < data.length; m++) {
+                    var li = document.createElement("li");
+                    li.innerHTML = data[m];
+                    ul.appendChild(li);
+                }
+            }
         }
     </script>
     <script type="text/javascript" src="json/resume.json"></script>

@@ -89,7 +89,7 @@
 	text-align: right;
 }
 
-.chapter .points{
+.chapter .points, .chapter .subpoints{
     padding: 0 40px;
 }
 
