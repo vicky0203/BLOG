@@ -343,6 +343,14 @@ li a:visited, li a:hover{
 
 /* ------------ media query */
 
+#simple-menu{
+	display: block;
+}
+
+#header{
+	display: none;
+}
+
 .menu, .mask{
 	display: none;
 }
@@ -351,6 +359,14 @@ li a:visited, li a:hover{
    .menu, .mask{
    	  display: block;
    }
+
+   #simple-menu{
+  	display: none;
+  }
+
+  #header{
+	display: block;
+  }
 }
 
 @media (min-width: 992px) {
