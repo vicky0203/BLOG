@@ -1,7 +1,7 @@
 var boxWidth = $(".box").eq(0).outerWidth(true); /*返回元素的宽度（包括内边距、边框和外边距）*/
 var gallery = $("#gallery");
 var colNum = Math.floor(gallery.width() / boxWidth);
-var colHeight = new Array(colNum); //sum heights for each columns
+var colHeight = new Array(colNum); //sum heights for each columns 
 
 var totalPicsNum = 34;
 
@@ -11,7 +11,7 @@ $(document).ready(function(){
 
  	$(window).scroll(function(){  
     // 判断窗口的滚动条是否接近页面底部，这里的20可以自定义  
-        if ($(document).scrollTop() + $(window).height() >= $(document).height() - 20) {  
+        if ($(document).scrollTop() + $(window).height() >= $(document).height() - 50) {  
         	var boxNum = $(".box").length;
             for(var i = boxNum + 1; i <= Math.min(boxNum + 6, totalPicsNum); i++){
             	var newbox = document.createElement("span");
