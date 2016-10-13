@@ -3,16 +3,17 @@ var gallery = $("#gallery");
 var colNum = Math.floor(gallery.width() / boxWidth);
 var colHeight = new Array(colNum); //sum heights for each columns
 
+var totalPicsNum = 34;
+
 $(document).ready(function(){
 
  	placePics();
 
  	$(window).scroll(function(){  
     // 判断窗口的滚动条是否接近页面底部，这里的20可以自定义  
-        if ($(document).scrollTop() + $(window).height() >= $(document).height()) {  
+        if ($(document).scrollTop() + $(window).height() >= $(document).height() - 20) {  
         	var boxNum = $(".box").length;
-            for(var i = boxNum + 1; i <= Math.min(boxNum + 6, 28); i++){
-            	console.log(i);
+            for(var i = boxNum + 1; i <= Math.min(boxNum + 6, totalPicsNum); i++){
             	var newbox = document.createElement("span");
             	newbox.setAttribute("class", "box");
             	newbox.setAttribute("id", "box" + i);
@@ -20,10 +21,19 @@ $(document).ready(function(){
             	var newpic = document.createElement("img");
             	newpic.setAttribute("src", "images/gallery/" + i + ".jpg");
             	newbox.appendChild(newpic);
+
+            	if ( i == totalPicsNum) { //取消监听 显示footer
+            		$ (window).unbind ('scroll');
+            		$("#footer").show();
+            	}
             }
         }
 
         placePics();
+    });
+
+    $(window).resize(function(){
+    	placePics();
     });
 }); 
 
