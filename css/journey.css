@@ -20,23 +20,21 @@ ul,li{
 
 	margin:30px -15px  0;
 	padding: 50px;
-
-	display: none;
 }
 
 .row-wrap{
-	height: 200px;
 	margin-bottom: 60px;
 
 	position: relative;
 }
 
-.pics-wrap, .text-wrap{
-	height: 100%;
+.pics-wrap{
+	height: 200px;
 }
 
+
 .text-wrap{
-	padding-right: 80px;
+	height: 100%;
 }
 
 .pics{
@@ -101,12 +99,25 @@ ul,li{
 	display: none;
 }
 
+.row-wrap{
+	text-align: center;
+}
+
+
 @media (min-width: 768px) {
 }
 
 @media (min-width: 992px) {
 	.left-trangle, .right-trangle{
 		display: block;
+	}
+
+	.row-wrap{
+		text-align: inherit;
+	}
+
+	.text-wrap{
+		padding-right: 80px;
 	}
 }
 

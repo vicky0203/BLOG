@@ -5,11 +5,18 @@ var colHeight = new Array(colNum); //sum heights for each columns
 
 var totalPicsNum = 34;
 
+var finishLoad = false;
+
 $(document).ready(function(){
 
  	placePics();
 
  	$(window).scroll(function(){  
+        if (finishLoad) {
+            $ (window).unbind ('scroll');
+            $("#footer").show();
+        }
+
     // 判断窗口的滚动条是否接近页面底部，这里的20可以自定义  
         if ($(document).scrollTop() + $(window).height() >= $(document).height() - 50) {  
         	var boxNum = $(".box").length;
@@ -23,12 +30,11 @@ $(document).ready(function(){
             	newbox.appendChild(newpic);
 
             	if ( i == totalPicsNum) { //取消监听 显示footer
-            		$ (window).unbind ('scroll');
-            		$("#footer").show();
+                    finishLoad = true;
             	}
             }
-        }
-
+        } 
+        
         placePics();
     });
 
@@ -38,12 +44,13 @@ $(document).ready(function(){
 }); 
 
 function placePics(){
-	$(".box").each(function(i, box){
+	$(".box").each(function(index, box){
  		var picHeight = $(box).outerHeight(true);
 
- 		if (i < colNum) {
- 			colHeight[i] = picHeight;
+ 		if (index < colNum) {
+ 			colHeight[index] = picHeight;
  		}else{
+            console.log(index);
  			var currentMinHeight = Math.min.apply(this, colHeight);
  			var currentMinHeightIndex = 0; 
  			for(var i = 0; i < colHeight.length; i++){ //IE 不支持 indexOf
@@ -51,16 +58,16 @@ function placePics(){
  					currentMinHeightIndex = i;
  					break;
  				}
- 			}
-
- 			$(box).css({
- 				"position" : "absolute",
- 				"top"  : currentMinHeight,
- 				"left" : $(".box").eq(currentMinHeightIndex).position().left
- 			})
+ 			} 
 
  			colHeight[currentMinHeightIndex] += picHeight;
  			gallery.css("height", Math.max.apply(this, colHeight));
+
+            $(box).css({
+                "position" : "absolute",
+                "top"  : currentMinHeight,
+                "left" : $(".box").eq(currentMinHeightIndex).position().left
+            })
  		}
  	});	
 }

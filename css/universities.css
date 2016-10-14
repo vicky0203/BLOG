@@ -28,7 +28,6 @@
 }
 
 #gallery{
-	padding: 0 50px;
 	margin-bottom: 50px;
 	position: relative;
 }
@@ -52,8 +51,24 @@
 
 
 /* ------------ media query */
+#gallery{
+	padding: 0 30px;
+}
+
 #gallery .box img{
-	width: 200px; 
+	width: 120px; 
+}
+
+@media (min-width: 510px) {
+	#gallery .box img{
+		width: 200px; 
+	}
+}
+
+@media (min-width: 768px) {
+	#gallery{
+		padding: 0 50px;
+	}
 }
 
 @media (min-width: 992px){

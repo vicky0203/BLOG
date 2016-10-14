@@ -226,9 +226,6 @@ li a:visited, li a:hover{
 }
 
 .carousel{
-	height: 320px;
-	margin-top: 50px;
-
 	position: relative;
 }
 
@@ -289,7 +286,6 @@ li a:visited, li a:hover{
 }
 
 .map{ 
-	height: 400px;  
     background: yellow; 
 }
 
@@ -355,6 +351,29 @@ li a:visited, li a:hover{
 	display: none;
 }
 
+.carousel-wrap{
+   	margin-bottom: 50px;
+}
+
+.carousel{	
+	height: 200px;
+}
+
+.map{ 
+	height: 300px; 
+}
+
+.introduction, .single{
+	margin-bottom: 50px;
+}
+
+@media (min-width: 480px){
+	.carousel{	
+		height: 320px;
+	}
+
+}
+
 @media (min-width: 768px) {
    .menu, .mask{
    	  display: block;
@@ -362,26 +381,46 @@ li a:visited, li a:hover{
 
    #simple-menu{
   	display: none;
-  }
+   }
 
-  #header{
-	display: block;
-  }
+   #header{
+	 display: block;
+   }
+
+   .single{
+	  margin-bottom: 0;
+   }
 }
 
 @media (min-width: 992px) {
-  .menu-wrap{
-  	  height: 400px;
-  }
+    .menu-wrap{
+  	    height: 400px;
+    }
 
-  .menu{ 
-  	  position: absolute;
-	  top: 50%;
-	  transform: translateY(-50%);
-	  -webkit-transform: translateY(-50%);
-	  -moz-transform: translateY(-50%);
-	  -o-transform: translateY(-50%);
-   }
+    .menu{ 
+	  	  position: absolute;
+		  top: 50%;
+		  transform: translateY(-50%);
+		  -webkit-transform: translateY(-50%);
+		  -moz-transform: translateY(-50%);
+		  -o-transform: translateY(-50%);
+    }
+
+    .carousel-wrap{
+   	   margin-bottom: 0;
+    }
+
+    .carousel{	
+   		margin-top: 50px;
+   	}
+
+    .map{ 
+	    height: 400px; 
+    }
+
+    .introduction{
+		margin-bottom: 0;
+	}
 }
 
 @media (min-width: 1200px) {

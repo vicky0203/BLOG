@@ -13,21 +13,20 @@
     display: block;
     font-size: 30px;
     color: white;
-    margin: 60px auto;
+    
     width: 30px;
 }
 
 .footer-wrap .sitemap{
 	height: 100%;
-	padding-top: 50px;
 }
 
 
 .footer-wrap .sitemap .links a{
     font-size: 12px;
     margin-bottom: 4px;
-    color: #c8c8c8;
-    display: block;
+    color: #c8c8c8; 
+
     font-weight: 600;
 }
 
@@ -50,10 +49,36 @@
 	 height: auto;
 }
 
+.footer-wrap .logo i{
+    margin: 30px auto;
+}
+
+.footer-wrap .sitemap{
+    padding-top: 0;
+
+    text-align: center;
+}
+
+.footer-wrap .sitemap .links a{
+    display: inline-block;
+}
+
 @media (min-width: 768px) {
 }
 
 @media (min-width: 992px) {
+    .footer-wrap .logo i{
+        margin: 60px auto;
+    }
+
+    .footer-wrap .sitemap{
+        padding-top: 50px;
+        text-align: left;
+    }
+
+    .footer-wrap .sitemap .links a{
+        display: block;
+    }
 }
 
 @media (min-width: 1200px) {
