@@ -10,8 +10,9 @@ $(document).ready(function(){
             if(currentPic >= picsNum){
                 clearInterval(timer);
                 showFirst();
+            }else{
+                toggleImg(currentPic);
             }
-            toggleImg(currentPic);
     }, 3000);  
 
 });

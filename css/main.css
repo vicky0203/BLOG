@@ -82,7 +82,7 @@ li a:visited, li a:hover{
 
 	display: none;
 
-	-webkit-transform-origin: 0px 0px;
+/* 	-webkit-transform-origin: 0px 0px;
 	-moz-transform-origin: 0px 0px;
 	-ms-transform-origin: 0px 0px;
 	-o-transform-origin: 0px 0px;
@@ -91,7 +91,7 @@ li a:visited, li a:hover{
 	-moz-transform: rotateX(-90deg);
 	-ms-transform: rotateX(-90deg);
 	-o-transform: rotateX(-90deg);
-	transform: rotateX(-90deg); 
+	transform: rotateX(-90deg);  */
 }
 
 .menu > li:hover ul{
@@ -102,11 +102,11 @@ li a:visited, li a:hover{
 	-ms-transition: all 0.3s ease-in;
 	-o-transition: all 0.3s ease-in;
 	transition: all 0.3s ease-in;
-	-webkit-transform: rotateX(0deg);
+/* 	-webkit-transform: rotateX(0deg);
     -moz-transform: rotateX(0deg);
     -ms-transform: rotateX(0deg);
     -o-transform: rotateX(0deg);
-	transform: rotateX(0deg);
+	transform: rotateX(0deg); */
 }
 
 .menu > li ul li{
@@ -147,6 +147,8 @@ li a:visited, li a:hover{
 	-ms-transform: translateZ(-25px) rotateX(90deg);
 	-o-transform: translateZ(-25px) rotateX(90deg);
 	transform: translateZ(-25px) rotateX(90deg);
+
+	/* 或者 -webkit-transform: rotateX(90deg) translateY(-25px); 注意rotate以后坐标轴位置变化*/
 } 
 
 .three-d-box{

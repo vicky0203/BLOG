@@ -103,7 +103,7 @@ function fadeOut(obj, opacity, speed){
     var num = 100;
     (function(){
         setOpacity(obj, num);
-        num--;
+        num-=3;
         if(num >= opacity){
             setTimeout(arguments.callee, speed);
         }else{

@@ -50,7 +50,6 @@ function placePics(){
  		if (index < colNum) {
  			colHeight[index] = picHeight;
  		}else{
-            console.log(index);
  			var currentMinHeight = Math.min.apply(this, colHeight);
  			var currentMinHeightIndex = 0; 
  			for(var i = 0; i < colHeight.length; i++){ //IE 不支持 indexOf
